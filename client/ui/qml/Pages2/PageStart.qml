@@ -295,7 +295,6 @@ PageType {
                 tabBarStackView.goToTabBarPage(PageEnum.PageHome)
                 ServersModel.processedIndex = ServersModel.defaultIndex
                 tabBar.currentIndex = 0
-                FocusController.setRootItem(null) // TODO: move to do it automaticaly
             }
         }
 
