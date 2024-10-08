@@ -803,51 +803,44 @@ PageType {
                                     headerText: clientName
                                 }
 
-                                ColumnLayout
-                                {
-                                    id: textColumn
-                                    property string textColor: AmneziaStyle.color.mutedGray
-                                    Layout.bottomMargin: 24
+                                ParagraphTextType {
+                                    color: AmneziaStyle.color.mutedGray
+                                    visible: creationDate !== ""
+                                    Layout.fillWidth: true
 
-                                    ParagraphTextType {
-                                        color: textColumn.textColor
-                                        visible: creationDate
-                                        Layout.fillWidth: true
+                                    text: qsTr("Creation date: %1").arg(creationDate)
+                                }
 
-                                        text: qsTr("Creation date: %1").arg(creationDate)
-                                    }
+                                ParagraphTextType {
+                                    color: AmneziaStyle.color.mutedGray
+                                    visible: latestHandshake !== ""
+                                    Layout.fillWidth: true
 
-                                    ParagraphTextType {
-                                        color: textColumn.textColor
-                                        visible: latestHandshake
-                                        Layout.fillWidth: true
+                                    text: qsTr("Latest handshake: %1").arg(latestHandshake)
+                                }
 
-                                        text: qsTr("Latest handshake: %1").arg(latestHandshake)
-                                    }
+                                ParagraphTextType {
+                                    color: AmneziaStyle.color.mutedGray
+                                    visible: dataReceived !== ""
+                                    Layout.fillWidth: true
 
-                                    ParagraphTextType {
-                                        color: textColumn.textColor
-                                        visible: dataReceived
-                                        Layout.fillWidth: true
+                                    text: qsTr("Data received: %1").arg(dataReceived)
+                                }
 
-                                        text: qsTr("Data received: %1").arg(dataReceived)
-                                    }
+                                ParagraphTextType {
+                                    color: AmneziaStyle.color.mutedGray
+                                    visible: dataSent !== ""
+                                    Layout.fillWidth: true
 
-                                    ParagraphTextType {
-                                        color: textColumn.textColor
-                                        visible: dataSent
-                                        Layout.fillWidth: true
+                                    text: qsTr("Data sent: %1").arg(dataSent)
+                                }
 
-                                        text: qsTr("Data sent: %1").arg(dataSent)
-                                    }
+                                ParagraphTextType {
+                                    color: AmneziaStyle.color.mutedGray
+                                    visible: allowedIps !== ""
+                                    Layout.fillWidth: true
 
-                                    ParagraphTextType {
-                                        color: textColumn.textColor
-                                        visible: allowedIps
-                                        Layout.fillWidth: true
-
-                                        text: qsTr("Allowed IPs: %1").arg(allowedIps)
-                                    }
+                                    text: qsTr("Allowed IPs: %1").arg(allowedIps)
                                 }
 
                                 Item {
