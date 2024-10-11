@@ -773,6 +773,7 @@ PageType {
                             }
 
                             anchors.fill: parent
+                            expandedHeight: parent.height * 0.9
 
                             expandedContent: ColumnLayout {
                                 id: expandedContent
@@ -784,10 +785,6 @@ PageType {
                                 anchors.rightMargin: 16
 
                                 spacing: 8
-
-                                onImplicitHeightChanged: {
-                                    clientInfoDrawer.expandedHeight = expandedContent.implicitHeight + 32
-                                }
 
                                 Connections {
                                     target: clientInfoDrawer
